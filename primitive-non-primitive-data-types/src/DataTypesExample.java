@@ -8,8 +8,8 @@ public class DataTypesExample {
               1. byte   -   1 Byte  --> -2^7 to +(2^7-1) = -128 to 127
               2. short  -   2 Byte  --> -2^15 to +(2^15-1) = -32768 to 32767
               3. char   -   2 Byte  --> -2^15 to +(2^15-1) = -32768 to 32767
-              4. int    -   4 Byte  --> -2^31 to +(2^31-1) = -2147483648  to 2147483648
-              5. float  -   4 Byte  -->-2^31 to +(2^31-1) = -2147483648  to 2147483648   --->single precision -->Floating Point num
+              4. int    -   4 Byte  --> -2^31 to +(2^31-1) = -2147483648  to 2147483647
+              5. float  -   4 Byte  -->-2^31 to +(2^31-1) = -2147483648  to 2147483647    --->single precision -->Floating Point num
               6. long   -   8 Byte  --> -2^63 to +(2^63-1) =
               7. double -   8 Byte  -->-2^63 to +(2^63-1) =                              --->double precision -->Floating point num
               8. boolean-   8 bit   --> true or false -> 0 or 1
@@ -41,13 +41,13 @@ public class DataTypesExample {
         System.out.println("int Min : "+Integer.MIN_VALUE);
         System.out.println("int Max : "+Integer.MAX_VALUE);
 
-        float floatData =  10.51212121f;
+        float floatData =  10.1212121212125f ;
         System.out.println("float : "+floatData);
         System.out.println("float Min : "+Float.MIN_VALUE);
         System.out.println("float Max : "+Float.MAX_VALUE);
 
 
-        double doubleData = 10.5121212121212120d;
+        double doubleData = 10.12121212121212121212125d;
         System.out.println("double : "+doubleData);
         System.out.println("double Min : "+Double.MIN_VALUE);
         System.out.println("double Max : "+Double.MAX_VALUE);
