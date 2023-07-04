@@ -42,12 +42,48 @@ public class Employee {
         this. phoneNo = phoneNo;
         System.out.println("***********************************");
     }
+
+    // Constructor Chaining
+     // 49 -> 56 -> 61
+
+    Employee(String name,int id,int salary){
+        // calling a constructor with gender and company as params
+        this("Female","TCL");// Constructor chaining
+        this.name = name;
+        this.id = id;
+        this.salary = salary;
+    }
+    Employee(String gender,String company){
+        this("Mumbai",90909090900l);// Constructor chaining
+        this.gender = gender;
+        this.company = company;
+    }
+    Employee(String address,long phoneNo){
+        this.address = address;
+        this.phoneNo = phoneNo;
+    }
+    Employee(long phoneNo,String address){
+        this.phoneNo = phoneNo;
+        this.address = address;
+    }
+
+    // Copy Constructor - Copy fields from one object to another object
+
+    Employee(Employee employee){
+        // 'this' here will refer employee6 as this cnstructor is clled by employee6
+        this.name = employee.name;
+        this.id = employee.id;
+        this.salary = employee.salary;
+        this.gender = employee.gender;
+        this.address = employee.address;
+        this.phoneNo = employee.phoneNo;
+
+    }
     void displayObjectAndMessge(){
         System.out.println("Hello " + this.name);
         System.out.println(this.id + "\n" + this.salary+"\n" +this.gender+"\n" +this.company+ "\n" + this.address+"\n" + this.phoneNo);
     }
 }
-
 class  TestClass{
     public static void main(String[] args) {
 
@@ -68,8 +104,13 @@ class  TestClass{
         //employee 5 = 5000h
         employee5.displayObjectAndMessge();
 
+        Employee employee6 =new Employee(employee5);
+        employee6.displayObjectAndMessge();
 
+        Employee employee7 = new Employee("Asmita",106,50000);
+        employee7.displayObjectAndMessge();
 
     }
 }
+
 
