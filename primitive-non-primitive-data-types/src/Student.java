@@ -28,14 +28,16 @@ public class Student {
 
    // Methods OR Behaviour OR Actions //
 
-    void study() {
+    void study()
+    {
         System.out.println(this.name + " is studying");
     }
      void  play(){
          System.out.println(this.name + "is playing");
      }
      void commute(){
-         System.out.println(this.name + "is commute");
+
+        System.out.println(this.name + "is commute");
      }
 }
 
